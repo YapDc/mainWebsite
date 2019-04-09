@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import YapLogoSVG from '../images/yapdc-logo.svg'
+import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 const SplashStyle = styled.div`
   height: 100%;
@@ -17,15 +19,46 @@ const SplashStyle = styled.div`
   div {
     align-self: center;
   }
+  h2 {
+    text-align: center;
+  }
 `
 
 const SplashScreen = () => {
   return (
-    <SplashStyle>
-      <div>
-        <img src={YapLogoSVG} alt="splash screen" />
-      </div>
-    </SplashStyle>
+    <StaticQuery
+      query={graphql`
+        query getSplashScreenContent {
+          file(name: { eq: "splash-screen" }) {
+            childMarkdownRemark {
+              frontmatter {
+                text
+                splashScreenImage {
+                  childImageSharp {
+                    original {
+                      src
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={data => {
+        const fetchData = data.file.childMarkdownRemark.frontmatter
+        const image = fetchData.splashScreenImage.childImageSharp.original.src
+        const text = fetchData.text
+        return (
+          <SplashStyle>
+            <div>
+              <img src={image} alt="splash screen" />
+              <h2> {text} </h2>
+            </div>
+          </SplashStyle>
+        )
+      }}
+    />
   )
 }
 
