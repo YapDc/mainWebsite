@@ -11,7 +11,6 @@ import AboutPreview from './preview-templates/aboutPreview'
 import SocialMediaPreview from './preview-templates/socialMediaPreview'
 import HeaderPreview from './preview-templates/headerPreview'
 import MemberSectionPreview from './preview-templates/memberSectionPreview'
-import SplashScreenPreview from './preview-templates/splashScreenPreview'
 class CSSInjector extends React.Component {
   constructor(props) {
     super(props)
@@ -96,10 +95,5 @@ CMS.registerPreviewTemplate('header', props => (
 CMS.registerPreviewTemplate('membership', props => (
   <CSSInjector>
     <MemberSectionPreview {...props} />
-  </CSSInjector>
-))
-CMS.registerPreviewTemplate('membership', props => (
-  <CSSInjector>
-    <SplashScreenPreview {...props} />
   </CSSInjector>
 ))
