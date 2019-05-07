@@ -135,7 +135,6 @@ class Header extends Component {
             <div>
               <Link to="/">
                 <div style={{ width: '170px' }}>
-                  {console.log(data)}
                   {data.logo && data.logo.childImageSharp ? (
                     <Img fluid={data.logo.childImageSharp.fluid} />
                   ) : (
