@@ -135,7 +135,11 @@ class Header extends Component {
             <div>
               <Link to="/">
                 <div style={{ width: '170px' }}>
-                  <Img fluid={data.logo.childImageSharp.fluid} />
+                  {data.logo && data.logo.childImageSharp ? (
+                    <Img fluid={data.logo.childImageSharp.fluid} />
+                  ) : (
+                    <img src={data.logo} alt="Logo image" />
+                  )}
                 </div>
               </Link>
             </div>
