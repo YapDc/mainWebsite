@@ -4,7 +4,7 @@ items:
   - externalLink: ''
     pageLink: about
     scrollLink: N/A
-    text: ABOUT YAP
+    text: ABOUT YAP DC
   - pageLink: N/A
     scrollLink: events
     text: UPCOMING EVENTS
