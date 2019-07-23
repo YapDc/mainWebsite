@@ -66,14 +66,6 @@ const YapTeamCard = styled.div`
     }
   }
 `
-const AboutMemberModal = props => {
-  return (
-    <Modal open={props.modalIsOpen} onClose={() => props.onClose()}>
-      <h1>Hello</h1>
-    </Modal>
-  )
-}
-
 class TeamCard extends Component {
   state = {
     modalIsOpen: false,
