@@ -136,7 +136,7 @@ const EventsSection = styled.section`
   }
 `
 const YapSection = styled.section`
-  padding: 15px;
+  padding: 64px 15px;
   .title {
     transition: 0.5s;
     font-size: 34px;
