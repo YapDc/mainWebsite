@@ -28,13 +28,9 @@ class SubscribeModal extends Component {
           dangerouslySetInnerHTML={{
             __html: `
                 .subscribe-modal-content{
-                   margin: 20px 40px;
+                   margin: 20px 5px;
                    color: #fff;
                 }
-
-                .subscribe-modal-content .text{
-                    margin-right: 20px;
-                 }
                  .subscribe-modal-content a{
                     color: #fff;
                  }
@@ -52,6 +48,7 @@ class SubscribeModal extends Component {
                 }
                 .styles_overlay__CLSq-{
                     background: rgba(0, 0, 0, 0.25);
+                    padding: 5px
                 }
            }`,
           }}
