@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { Layout, TeamCardsLayout } from '../components'
+import { Layout } from '../components'
 import { convertMarkdownToHtml } from '../utils/utils'
 
 const AboutStyle = styled.section`
@@ -115,9 +115,6 @@ export const AboutTemplate = props => {
           __html: convertMarkdownToHtml(props.html1),
         }}
       />
-      <section className="text-section">
-        <TeamCardsLayout data={props.leadershipData} />
-      </section>
       <section
         className="text-section content2"
         dangerouslySetInnerHTML={{
@@ -129,10 +126,6 @@ export const AboutTemplate = props => {
 }
 const About = props => {
   const data = props.data
-  const leadershipData =
-    data && data.leadership
-      ? data.leadership.childMarkdownRemark.frontmatter
-      : {}
   const content = props.preview || data.content.childMarkdownRemark.frontmatter
 
   return (
@@ -141,7 +134,6 @@ const About = props => {
         coverImage={content.coverImage}
         html1={content.content1}
         html2={content.content2}
-        leadershipData={leadershipData}
       />
     </Layout>
   )
@@ -151,27 +143,6 @@ export default About
 
 export const query = graphql`
   query {
-    leadership: file(name: { eq: "leadership" }) {
-      childMarkdownRemark {
-        frontmatter {
-          header
-          leaders {
-            firstName
-            lastName
-            about
-            image {
-              childImageSharp {
-                fluid(maxWidth: 600, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            description
-          }
-        }
-      }
-    }
-
     content: file(name: { eq: "about-content" }) {
       childMarkdownRemark {
         frontmatter {
