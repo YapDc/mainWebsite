@@ -49,28 +49,5 @@ leaders:
     firstName: ELIZABETH
     image: /img/elizabeth.jpg
     lastName: OGUNWO
-  - about: >
-      Rose Essiem is a dynamic and highly-skilled educator and community
-      organizer with over 10 years of progressive experience, designing and
-      managing high-quality and innovative programs to strengthen and enhance
-      the educational experiences of students both in the U.S. and globally. In
-      her tenure, she has served in a number of capacities at top research
-      universities, and has developed an expertise of trends and complexities of
-      international higher education, including best practices in student
-      engagement and retention. 
-
-
-      Additionally, Rose serves as the Executive Director of the Young African
-      Professionals DC (YAP DC) - a 501(c)3 organization based in Washington,
-      D.C. Since its inception in 2002, YAP DC has grown into a respected
-      network of more than 10,000 young African professionals across the DC
-      Metropolitan area and the world. YAP DC’s mission is to address the
-      professional needs of young Africans in the diaspora; support more
-      Africans in positions of power and influence; and positively influence
-      narratives about the continent.
-    description: EXECUTIVE DIRECTOR/BOARD MEMBER
-    firstName: ROSE
-    image: /img/rose.jpg
-    lastName: ESSIEM
 ---
 
