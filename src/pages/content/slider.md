@@ -2,7 +2,7 @@
 image:
   - description: 'Yap members chatting '
     image: >-
-      https://raw.githubusercontent.com/YapDc/mainWebsite/master/static/img/membership.jpg
+      https://raw.githubusercontent.com/YapDc/mainWebsite/master/static/img/about-banner.jpg
   - description: Yap members interacting
     image: /img/ds7_6822.jpg
   - description: Yap Competition
